@@ -33,6 +33,7 @@ if db is not None:
 
     for room_id in hub_copy_rows:
         new_hub_id = str(room_id[0])
+        c.execute("DELETE FROM room_objects WHERE hub_id=" + str(new_hub_id) + ";")
         for row in object_rows:
             room_object_id = row[0]
             object_id = row[1]
