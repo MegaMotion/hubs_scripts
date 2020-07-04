@@ -31,15 +31,17 @@ for room in rooms_data["rooms"]:
     sql = "SELECT * FROM room_objects WHERE hub_id=" + str(hub_id) + ";"
     c.execute(sql)
     object_rows = c.fetchall()
+    print("Found " + 
     for row in object_rows:
         room_object_id = row[0]
         object_id = row[1]
         gltf_node = row[3]
         inserted_at = row[4]
         updated_at = row[5]
-        account_id = row[6]        
+        account_id = row[6]
+        print("Object id: " + str(object_id))
         for copy_room in room["copy_rooms"]:
-            print("Adding objects to room: " + copy_room)
+            print("Adding object to room: " + copy_room)
             sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + copy_room + "';"
             c.execute(sql)
             copy_hub_id = c.fetchone()[0]
