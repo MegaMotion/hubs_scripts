@@ -43,6 +43,7 @@ for room in rooms_data["rooms"]:
             sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + copy_room + "';"
             c.execute(sql)
             copy_hub_id = c.fetchone()[0]
+            print("adding an object to copy hub id: " + copy_hub_id)
             c.execute("INSERT INTO room_objects(object_id,hub_id,gltf_node,inserted_at,updated_at,account_id) " + \
                       "VALUES (%s,%s,%s,%s,%s,%s);",\
                       (object_id,copy_hub_id,psycopg2.Binary(gltf_node),inserted_at,updated_at,account_id))
