@@ -1,6 +1,6 @@
 {
     'rooms': [
-	{'slug':'m-peachgate', 'hub_sid':'oefaBKd', 'copy_rooms':['SB9RfcE']},
+	{'slug':'m-peachgate', 'hub_sid':'oefaBKd', 'copy_rooms':['SB9RfcE','p2N4iWX']},
 	{'slug':'m-xavanadu', 'hub_sid':'nb4Xh4a', 'copy_rooms':['DT8DngM']},
 	{'slug':'m-chelamela','hub_sid':'8kkd9rJ', 'copy_rooms':['JmkxLFH']},
 	{'slug':'m-jillscrossing','hub_sid':'oZUvVBu', 'copy_rooms':['akBtKYg']},
