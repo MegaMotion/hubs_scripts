@@ -23,7 +23,7 @@ for room in rooms_data["rooms"]:
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["hub_sid"] + "';"
     c.execute(sql)
     hub_id = c.fetchone()[0]    
-    sql = "SELECT * FROM room_objects WHERE hub_id=" + hub_id + ";"
+    sql = "SELECT * FROM room_objects WHERE hub_id=" + str(hub_id) + ";"
     c.execute(sql)
     object_rows = c.fetchall()
     for row in object_rows:
