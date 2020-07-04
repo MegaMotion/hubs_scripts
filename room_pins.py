@@ -18,7 +18,6 @@ if db is None:
     sys.exit() #temp
     
 c = db.cursor()
-
 for room in rooms_data["rooms"]:
     print("slug: " + room["slug"] + " SID: " + room["hub_sid"])
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["hub_sid"] + "';"
