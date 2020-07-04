@@ -44,7 +44,7 @@ for room in rooms_data["rooms"]:
             inserted_at = row[4]
             updated_at = row[5]
             account_id = row[6]
-            print("Object id: " + str(object_id))
+            #print("Object id: " + str(object_id))
             c.execute("INSERT INTO room_objects(object_id,hub_id,gltf_node,inserted_at,updated_at,account_id) " + \
                       "VALUES (%s,%s,%s,%s,%s,%s);",\
                       (object_id,copy_hub_id,psycopg2.Binary(gltf_node),inserted_at,updated_at,account_id))
