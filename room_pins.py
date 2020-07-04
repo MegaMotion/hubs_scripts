@@ -36,10 +36,12 @@ for room in rooms_data["rooms"]:
         updated_at = row[5]
         account_id = row[6]        
         for copy_room in room["copy_rooms"]:
+            print("Adding objects to room: " + copy_room)
             sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + copy_room + "';"
             c.execute(sql)
             copy_hub_id = c.fetchone()[0]
-            c.execute("INSERT INTO room_objects(object_id,hub_id,gltf_node,inserted_at,updated_at,account_id) VALUES (%s,%s,%s,%s,%s,%s);",\
+            c.execute("INSERT INTO room_objects(object_id,hub_id,gltf_node,inserted_at,updated_at,account_id) " + \
+                      "VALUES (%s,%s,%s,%s,%s,%s);",\
                       (object_id,copy_hub_id,psycopg2.Binary(gltf_node),inserted_at,updated_at,account_id))
 
 db.commit()    
