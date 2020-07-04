@@ -22,8 +22,7 @@ for room in rooms_data["rooms"]:
     print("slug: " + room["slug"] + " SID: " + room["hub_sid"])
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["hub_sid"] + "';"
     c.execute(sql)
-    hub_id = c.fetchone()[0]
-    
+    hub_id = c.fetchone()[0]    
     sql = "SELECT * FROM room_objects WHERE hub_id=" + hub_id + ";"
     c.execute(sql)
     object_rows = c.fetchall()
@@ -33,10 +32,9 @@ for room in rooms_data["rooms"]:
         gltf_node = row[3]
         inserted_at = row[4]
         updated_at = row[5]
-        account_id = row[6]
-        
-        for copy in room["copy_rooms"]:
-            sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + copy + "';"
+        account_id = row[6]        
+        for copy_room in room["copy_rooms"]:
+            sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + copy_room + "';"
             c.execute(sql)
             copy_hub_id = c.fetchone()[0]
             c.execute("INSERT INTO room_objects(object_id,hub_id,gltf_node,inserted_at,updated_at,account_id) VALUES (%s,%s,%s,%s,%s,%s);",\
