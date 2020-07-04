@@ -22,7 +22,7 @@ c = db.cursor()
 for room in rooms_data["rooms"]:
     print("slug: " + room["slug"] + " SID: " + room["hub_sid"])
     for copy_room in room["copy_rooms"]:
-        print("Copy room: " + copy_room_
+        print("Copy room: " + copy_room)
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["hub_sid"] + "';"
     c.execute(sql)
     hub_id = c.fetchone()[0]
