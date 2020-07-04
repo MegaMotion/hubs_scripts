@@ -31,7 +31,6 @@ for room in rooms_data["rooms"]:
     sql = "SELECT * FROM room_objects WHERE hub_id=" + str(hub_id) + ";"
     c.execute(sql)
     object_rows = c.fetchall()
-    print("Found " + 
     for row in object_rows:
         room_object_id = row[0]
         object_id = row[1]
