@@ -22,7 +22,9 @@ for room in rooms_data["rooms"]:
     print("slug: " + room["slug"] + " SID: " + room["hub_sid"])
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["hub_sid"] + "';"
     c.execute(sql)
-    hub_id = c.fetchone()[0]    
+    hub_id = c.fetchone()[0]
+    sql = "DELETE FROM room_objects WHERE hub_id=" + str(hub_id) + ";"
+    c.execute(sql)
     sql = "SELECT * FROM room_objects WHERE hub_id=" + str(hub_id) + ";"
     c.execute(sql)
     object_rows = c.fetchall()
