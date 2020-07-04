@@ -20,9 +20,7 @@ if db is None:
     
 c = db.cursor()
 for room in rooms_data["rooms"]:
-    print("slug: " + room["slug"] + " SID: " + room["hub_sid"])
-    for copy_room in room["copy_rooms"]:
-        print("Copy room: " + copy_room)
+    #print("slug: " + room["slug"] + " SID: " + room["hub_sid"])
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["hub_sid"] + "';"
     c.execute(sql)
     hub_id = c.fetchone()[0]
@@ -30,8 +28,10 @@ for room in rooms_data["rooms"]:
     sql = "SELECT * FROM room_objects WHERE hub_id=" + str(hub_id) + ";"
     c.execute(sql)
     object_rows = c.fetchall()
-    
+    print("Found " + str(len(object_rows)) + " objects in " + room["slug"])
+          
     for copy_room in room["copy_rooms"]:
+        print("Copy room: " + copy_room)
         sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + copy_room + "';"
         c.execute(sql)
         copy_hub_id = c.fetchone()[0]
