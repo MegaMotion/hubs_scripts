@@ -1,13 +1,13 @@
 {
-    'rooms': [
-	{'slug':'m-peachgate', 'hub_sid':'oefaBKd', 'copy_rooms':['SB9RfcE','p2N4iWX']},
-	{'slug':'m-xavanadu', 'hub_sid':'nb4Xh4a', 'copy_rooms':['DT8DngM']},
-	{'slug':'m-chelamela','hub_sid':'8kkd9rJ', 'copy_rooms':['JmkxLFH']},
-	{'slug':'m-jillscrossing','hub_sid':'oZUvVBu', 'copy_rooms':['akBtKYg']},
-	{'slug':'m-e13th','hub_sid':'kZSgGXo','copy_rooms':['Yq4hDRV']},
-	{'slug':'m-communityvillage','hub_sid':'zWSpT5H','copy_rooms':['nktgenp']},
-	{'slug':'m-upperriver','hub_sid':'kTioiNj','copy_rooms':['EXXEoHM','PWmwsHC']},
-	{'slug':'m-theritz','hub_sid':'xFKRmiG','copy_rooms':['7tDAuQU']},
-	{'slug':'m-mainstage','hub_sid':'VDcxrbc','copy_rooms':['zTqh7Ce']}
+    "rooms": [
+	{"slug":"m-peachgate", "hub_sid":"oefaBKd", "copy_rooms":["SB9RfcE","p2N4iWX"]},
+	{"slug":"m-xavanadu", "hub_sid":"nb4Xh4a", "copy_rooms":["DT8DngM"]},
+	{"slug":"m-chelamela","hub_sid":"8kkd9rJ", "copy_rooms":["JmkxLFH"]},
+	{"slug":"m-jillscrossing","hub_sid":"oZUvVBu", "copy_rooms":["akBtKYg"]},
+	{"slug":"m-e13th","hub_sid":"kZSgGXo","copy_rooms":["Yq4hDRV"]},
+	{"slug":"m-communityvillage","hub_sid":"zWSpT5H","copy_rooms":["nktgenp"]},
+	{"slug":"m-upperriver","hub_sid":"kTioiNj","copy_rooms":["EXXEoHM","PWmwsHC"]},
+	{"slug":"m-theritz","hub_sid":"xFKRmiG","copy_rooms":["7tDAuQU"]},
+	{"slug":"m-mainstage","hub_sid":"VDcxrbc","copy_rooms":["zTqh7Ce"]}
 	]
 }
