@@ -1,13 +1,13 @@
 {
     "rooms": [
-	{"slug":"m-peachgate", "hub_sid":"oefaBKd", "copy_rooms":["SB9RfcE","p2N4iWX","f5VSd3D"]},
-	{"slug":"m-xavanadu", "hub_sid":"nb4Xh4a", "copy_rooms":["DT8DngM","J8aNHhx","JZNCqiF"]},
-	{"slug":"m-chelamela","hub_sid":"8kkd9rJ", "copy_rooms":["JmkxLFH","c8ggWzf","xAZ94kA"]},
-	{"slug":"m-jillscrossing","hub_sid":"oZUvVBu", "copy_rooms":["akBtKYg","5THfipR","9D7StEs"]},
-	{"slug":"m-e13th","hub_sid":"kZSgGXo","copy_rooms":["Yq4hDRV","rKy7rt5","AT8cW6P"]},
-	{"slug":"m-communityvillage","hub_sid":"zWSpT5H","copy_rooms":["nktgenp","XgrrKEA","6ANCyp8"]},
-	{"slug":"m-upperriver","hub_sid":"kTioiNj","copy_rooms":["EXXEoHM","PWmwsHC","aRruXH6"]},
-	{"slug":"m-theritz","hub_sid":"xFKRmiG","copy_rooms":["7tDAuQU","Vzhre4P","P8Ri9J6"]},
-	{"slug":"m-mainstage","hub_sid":"VDcxrbc","copy_rooms":["zTqh7Ce","D58Lbv2","6HzY4YB"]}
+	{"slug":"m-peachgate", "hub_sid":"oefaBKd", "copy_rooms":["SB9RfcE","p2N4iWX","f5VSd3D","JnE484n","9jjAiVs"]},
+	{"slug":"m-xavanadu", "hub_sid":"nb4Xh4a", "copy_rooms":["DT8DngM","J8aNHhx","JZNCqiF","6ucacwQ","TTsSahM"]},
+	{"slug":"m-chelamela","hub_sid":"8kkd9rJ", "copy_rooms":["JmkxLFH","c8ggWzf","xAZ94kA","dN9DgES","x4DeBwM"]},
+	{"slug":"m-jillscrossing","hub_sid":"oZUvVBu", "copy_rooms":["akBtKYg","5THfipR","9D7StEs","9Tyw4oy","7fpu8zW"]},
+	{"slug":"m-e13th","hub_sid":"kZSgGXo","copy_rooms":["Yq4hDRV","rKy7rt5","AT8cW6P","KiQpoxj","xgxr58w"]},
+	{"slug":"m-communityvillage","hub_sid":"zWSpT5H","copy_rooms":["nktgenp","XgrrKEA","6ANCyp8","4z7yp7Y","WzmbyHW"]},
+	{"slug":"m-upperriver","hub_sid":"kTioiNj","copy_rooms":["EXXEoHM","PWmwsHC","aRruXH6","SWfwkUU","owFN3Jn"]},
+	{"slug":"m-theritz","hub_sid":"xFKRmiG","copy_rooms":["7tDAuQU","Vzhre4P","P8Ri9J6","YNxWPds","jTHaYWn"]},
+	{"slug":"m-mainstage","hub_sid":"VDcxrbc","copy_rooms":["zTqh7Ce","D58Lbv2","6HzY4YB","wRVqD7R","69eNPfJ"]}
 	]
 }
