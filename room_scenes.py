@@ -25,9 +25,9 @@ for room in rooms_data["rooms"]:
     scene_id = hub[0]
     scene_listing_id = hub[1]
     if (scene_id):
-        print("Room " + room["name"] + " has a scene id: " + str(scene_id))
+        print("Room " + room["slug"] + " has a scene id: " + str(scene_id))
     elif (scene_listing_id):
-        print("Room " + room["name"] + " has a scene listing id: " + str(scene_listing_id))
+        print("Room " + room["slug"] + " has a scene listing id: " + str(scene_listing_id))
 
 c.close()
 db.close()
