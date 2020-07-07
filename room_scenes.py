@@ -21,9 +21,9 @@ c = db.cursor()
 for room in rooms_data["rooms"]:
     sql = "SELECT scene_id,scene_listing_id FROM hubs WHERE hub_sid='" + room["hub_sid"] + "';"
     c.execute(sql)
-    let hub = c.fetchone()
-    let scene_id = hub[0]
-    let scene_listing_id = hub[1]
+    hub = c.fetchone()
+    scene_id = hub[0]
+    scene_listing_id = hub[1]
     if (scene_id):
         print("Room " + room["name"] + " has a scene id: " + str(scene_id))
     elif (scene_listing_id):
