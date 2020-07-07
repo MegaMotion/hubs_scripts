@@ -26,11 +26,11 @@ for room in rooms_data["rooms"]:
     scene_listing_id = hub[1]
     if (scene_id):
         print("Room " + room["slug"] + " has a scene id: " + str(scene_id))
-        sql = "UPDATE hubs SET scene_id=" + str(scene_id) + ",scene_listing_id=null WHERE name LIKE '" +  + "';"
+        sql = "UPDATE hubs SET scene_id=" + str(scene_id) + ",scene_listing_id=null WHERE name LIKE '" + room["copy_name"] + "%';"
         print(sql)
     elif (scene_listing_id):
         print("Room " + room["slug"] + " has a scene listing id: " + str(scene_listing_id))
-        sql = "UPDATE hubs SET scene_id=null,scene_listing_id=" + str(scene_listing_id) + " WHERE name LIKE '" +  + "';"
+        sql = "UPDATE hubs SET scene_id=null,scene_listing_id=" + str(scene_listing_id) + " WHERE name LIKE '" + room["copy_name"] + "%';"
         print(sql)
 
 c.close()
