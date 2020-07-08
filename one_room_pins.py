@@ -28,7 +28,7 @@ source_name = source[1]
 sql = "SELECT * FROM room_objects WHERE hub_id=" + str(hub_id) + ";"
 c.execute(sql)
 object_rows = c.fetchall()
-print("Found " + str(len(object_rows)) + " objects in " + room["slug"])
+print("Found " + str(len(object_rows) + " objects in " + room["slug"])
     
 sql = "SELECT hub_id,name FROM hubs WHERE hub_sid='" + dest_sid + "';"
 c.execute(sql)
