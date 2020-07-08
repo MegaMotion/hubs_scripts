@@ -36,8 +36,8 @@ dest = c.fetchone()
 dest_hub_id = dest[0]
 dest_name = dest[1]
 print("source name: " + source_name  + "  dest name: " + dest_name)
-#sql = "DELETE FROM room_objects WHERE hub_id=" + str(dest_hub_id) + ";"
-#c.execute(sql)
+sql = "DELETE FROM room_objects WHERE hub_id=" + str(dest_hub_id) + ";"
+c.execute(sql)
 for row in object_rows:
     room_object_id = row[0]
     object_id = row[1]
@@ -45,9 +45,9 @@ for row in object_rows:
     inserted_at = row[4]
     updated_at = row[5]
     account_id = row[6]
-    #c.execute("INSERT INTO room_objects(object_id,hub_id,gltf_node,inserted_at,updated_at,account_id) " + \
-    #          "VALUES (%s,%s,%s,%s,%s,%s);",\
-    #          (object_id,dest_hub_id,psycopg2.Binary(gltf_node),inserted_at,updated_at,account_id))
+    c.execute("INSERT INTO room_objects(object_id,hub_id,gltf_node,inserted_at,updated_at,account_id) " + \
+              "VALUES (%s,%s,%s,%s,%s,%s);",\
+              (object_id,dest_hub_id,psycopg2.Binary(gltf_node),inserted_at,updated_at,account_id))
 
 db.commit()
 c.close()
