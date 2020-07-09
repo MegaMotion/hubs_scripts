@@ -6,7 +6,7 @@ import json
 rooms_file = "rooms.json"
 if (len(sys.argv)==2):
     rooms_file = sys.argv[1]
-print("Copying pins for rooms file: " + rooms_file)
+print("Setting scenes for rooms file: " + rooms_file)
 
 with open(rooms_file, "r") as read_file:
     rooms_data = json.load(read_file)
