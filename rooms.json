@@ -1,15 +1,16 @@
 {
     "rooms": [
-	{"slug":"m-peachgate","hub_sid":"oefaBKd","copy_name":"PeachGate","copy_rooms":["SB9RfcE","p2N4iWX","f5VSd3D","JnE484n","9jjAiVs"]},
-	{"slug":"m-xavanadu","hub_sid":"nb4Xh4a","copy_name":"Xavanadu", "copy_rooms":["DT8DngM","J8aNHhx","JZNCqiF","6ucacwQ","TTsSahM"]},
-	{"slug":"m-chelamela","hub_sid":"8kkd9rJ","copy_name":"ChelaMela", "copy_rooms":["JmkxLFH","c8ggWzf","xAZ94kA","dN9DgES","x4DeBwM"]},
-	{"slug":"m-jillscrossing","hub_sid":"oZUvVBu","copy_name":"JillsCrossing", "copy_rooms":["akBtKYg","5THfipR","9D7StEs","9Tyw4oy","7fpu8zW"]},
-	{"slug":"m-e13th","hub_sid":"kZSgGXo","copy_name":"E13th","copy_rooms":["Yq4hDRV","rKy7rt5","AT8cW6P","KiQpoxj","xgxr58w"]},
-	{"slug":"m-communityvillage","hub_sid":"zWSpT5H","copy_name":"CommunityVillage","copy_rooms":["nktgenp","XgrrKEA","6ANCyp8","4z7yp7Y","WzmbyHW"]},
-	{"slug":"m-upperriver","hub_sid":"kTioiNj","copy_name":"UpperRiver","copy_rooms":["EXXEoHM","PWmwsHC","aRruXH6","SWfwkUU","owFN3Jn"]},
-	{"slug":"m-theritz","hub_sid":"xFKRmiG","copy_name":"TheRitz","copy_rooms":["7tDAuQU","Vzhre4P","P8Ri9J6","YNxWPds","jTHaYWn"]},
-	{"slug":"m-mainstage","hub_sid":"VDcxrbc","copy_name":"MainStage","copy_rooms":["zTqh7Ce","D58Lbv2","6HzY4YB","wRVqD7R","69eNPfJ"]},
-	{"slug":"m-recyclingdock","hub_sid":"jr32npj","copy_name":"RecyclingDock","copy_rooms":["SWSDmpg","Ne5Jn6a","2MSNYYc","BCUVUJe","Kr5Q6iZ"]},
-	{"slug":"m-dragonmeadow","hub_sid":"fHwG6vC","copy_name":"DragonMeadow","copy_rooms":["JqcbErd","MnqwaKR","jPwxDho","pfbHVHT","vD9oufX"]}
+	{"slug":"m-peachgate","hub_sid":"oefaBKd","copy_name":"PeachGate","copy_rooms":["SB9RfcE","p2N4iWX","f5VSd3D","JnE484n","9jjAiVs","cH55CLP","bmep8BR","KT6GF5g"]},
+	{"slug":"m-xavanadu","hub_sid":"nb4Xh4a","copy_name":"Xavanadu", "copy_rooms":["DT8DngM","J8aNHhx","JZNCqiF","6ucacwQ","TTsSahM","vKPbvkL","GUnmk48","PLSzYGP"]},
+	{"slug":"m-chelamela","hub_sid":"8kkd9rJ","copy_name":"ChelaMela", "copy_rooms":["JmkxLFH","c8ggWzf","xAZ94kA","dN9DgES","x4DeBwM","hg3rbPN","svNbhnu","segRLmb"]},
+	{"slug":"m-jillscrossing","hub_sid":"oZUvVBu","copy_name":"JillsCrossing", "copy_rooms":["akBtKYg","5THfipR","9D7StEs","9Tyw4oy","7fpu8zW","enGr6BX","3Ktg2sV","qYw6FYC"]},
+	{"slug":"m-e13th","hub_sid":"kZSgGXo","copy_name":"E13th","copy_rooms":["Yq4hDRV","rKy7rt5","AT8cW6P","KiQpoxj","xgxr58w","fayrPYC","wjjoWPU","omsprGy"]},
+	{"slug":"m-communityvillage","hub_sid":"zWSpT5H","copy_name":"CommunityVillage","copy_rooms":["nktgenp","XgrrKEA","6ANCyp8","4z7yp7Y","WzmbyHW","awE8Fsr","KvxnbkD","MVpx7Ao"]},
+	{"slug":"m-upperriver","hub_sid":"kTioiNj","copy_name":"UpperRiver","copy_rooms":["EXXEoHM","PWmwsHC","aRruXH6","SWfwkUU","owFN3Jn","jgxhpmJ","Y3JiJm8","5hFQvxH"]},
+	{"slug":"m-theritz","hub_sid":"xFKRmiG","copy_name":"TheRitz","copy_rooms":["7tDAuQU","Vzhre4P","P8Ri9J6","YNxWPds","jTHaYWn","vYPMpfy","JTycKjW","BuzynA8"]},
+	{"slug":"m-mainstage","hub_sid":"VDcxrbc","copy_name":"MainStage","copy_rooms":["zTqh7Ce","D58Lbv2","6HzY4YB","wRVqD7R","69eNPfJ","UiDATRf","fUARnhu","aX3XzQe"]},
+	{"slug":"m-recyclingdock","hub_sid":"jr32npj","copy_name":"RecyclingDock","copy_rooms":["SWSDmpg","Ne5Jn6a","2MSNYYc","BCUVUJe","Kr5Q6iZ","U9oKhr2","5ma9jCU","y2jHCPd"]},
+	{"slug":"m-dragonmeadow","hub_sid":"fHwG6vC","copy_name":"DragonMeadow","copy_rooms":["JqcbErd","MnqwaKR","jPwxDho","pfbHVHT","vD9oufX","rckrcsK","3jDDzHJ","ZrkWYEL"]},
+	{"slug":"m-frontporch","hub_sid":"aYbS3pM","copy_name":"FrontPorch","copy_rooms":["5yATkBn","Z4r7bd2","uXE8UGB","5sWQcmL","mikJGLF","xeNUyxB","f8sgLi3","zyzePgB"]}
 	]
 }
