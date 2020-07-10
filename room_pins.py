@@ -11,7 +11,9 @@ print("Copying pins for rooms file: " + rooms_file)
 with open(rooms_file, "r") as read_file:
     rooms_data = json.load(read_file)
     read_file.close()
-    
+
+do_not_copy = ["49hyg3b","7hpie7p","ix9byq6","7mka7du","16oqymj","slu14vz","cizb1bj","mfe9ph4","c5cxbid","y4ndhk8","b8y06lk","2mz502d","74y42m8"]
+
 
 db = psycopg2.connect(host="localhost",database="polycosm_production",user="postgres")
 if db is None:
@@ -45,9 +47,10 @@ for room in rooms_data["rooms"]:
             updated_at = row[5]
             account_id = row[6]
             #print("Object id: " + str(object_id))
-            c.execute("INSERT INTO room_objects(object_id,hub_id,gltf_node,inserted_at,updated_at,account_id) " + \
-                      "VALUES (%s,%s,%s,%s,%s,%s);",\
-                      (object_id,copy_hub_id,psycopg2.Binary(gltf_node),inserted_at,updated_at,account_id))
+            if object_id not in do_not_copy:
+                c.execute("INSERT INTO room_objects(object_id,hub_id,gltf_node,inserted_at,updated_at,account_id) " + \
+                          "VALUES (%s,%s,%s,%s,%s,%s);",\
+                          (object_id,copy_hub_id,psycopg2.Binary(gltf_node),inserted_at,updated_at,account_id))
 
 db.commit()    
 c.close()
