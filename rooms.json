@@ -11,6 +11,7 @@
 	{"slug":"m-mainstage","hub_sid":"VDcxrbc","copy_name":"MainStage","copy_rooms":["zTqh7Ce","D58Lbv2","6HzY4YB","wRVqD7R","69eNPfJ","UiDATRf","fUARnhu","aX3XzQe"]},
 	{"slug":"m-recyclingdock","hub_sid":"jr32npj","copy_name":"RecyclingDock","copy_rooms":["SWSDmpg","Ne5Jn6a","2MSNYYc","BCUVUJe","Kr5Q6iZ","U9oKhr2","5ma9jCU","y2jHCPd"]},
 	{"slug":"m-dragonmeadow","hub_sid":"fHwG6vC","copy_name":"DragonMeadow","copy_rooms":["JqcbErd","MnqwaKR","jPwxDho","pfbHVHT","vD9oufX","rckrcsK","3jDDzHJ","ZrkWYEL"]},
-	{"slug":"m-frontporch","hub_sid":"aYbS3pM","copy_name":"FrontPorch","copy_rooms":["5yATkBn","Z4r7bd2","uXE8UGB","5sWQcmL","mikJGLF","xeNUyxB","f8sgLi3","zyzePgB"]}
+	{"slug":"m-frontporch","hub_sid":"aYbS3pM","copy_name":"FrontPorch","copy_rooms":["5yATkBn","Z4r7bd2","uXE8UGB","5sWQcmL","mikJGLF","xeNUyxB","f8sgLi3","zyzePgB"]},
+	{"slug":"m-ritzfirepit","hub_sid":"dvVzT7Q","copy_name":"RitzFirepit","copy_rooms":["yLrkTBy"]}	
 	]
 }
