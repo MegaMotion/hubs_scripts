@@ -18,15 +18,13 @@ c = db.cursor()
 start_date = '2020-07-01'
 end_date =   '2020-07-14'
 
-
-
 session_length_query = "SELECT session_id,started_at,ended_at,AGE(ended_at,started_at) AS length,entered_event_payload FROM session_stats WHERE started_at::date>='" + start_date + "' AND started_at<='" + end_date  + "';"
 #  ORDER BY AGE(ended_at,started_at) DESC;"
 
 c.execute(session_length_query)
 session_rows = c.fetchall()
 for session in session_rows:
-    print("Session length: " + str(session[3]))
+    print("Start: " + str(started_at) + "  Session length: " + str(session[3]))
 
 
 for room in rooms_data["rooms"]:
