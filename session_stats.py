@@ -24,11 +24,11 @@ session_length_query = "SELECT session_id,started_at,ended_at,AGE(ended_at,start
 c.execute(session_length_query)
 session_rows = c.fetchall()
 for session in session_rows:
-    print("Start: " + str(started_at) + "  Session length: " + str(session[3]))
+    print("Session " + str(session[0])  + " Start: " + str(session[1]) + "  Session length: " + str(session[3]))
 
 
-for room in rooms_data["rooms"]:
-    print("slug: " + room["slug"] + " SID: " + room["hub_sid"])
+#for room in rooms_data["rooms"]:
+#    print("slug: " + room["slug"] + " SID: " + room["hub_sid"])
 
     
 c.close()
