@@ -31,11 +31,11 @@ while h < 72:
     c.execute(session_query)
     count = c.fetchone()[0]
     time = h % 24
-    if h <= 24:
+    if h < 24:
         date = start_date
-    elif h > 24 and h <= 48:
+    elif h >= 24 and h < 48:
         date = '2020-07-11'
-    elif h > 48:
+    elif h >= 48:
         date = '2020-07-12'
     print (date + " " + str(time) + ":00 -  " + str(count))
     h += 1
