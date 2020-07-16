@@ -15,16 +15,38 @@ if db is None:
     
 c = db.cursor()
 
-start_date = '2020-07-01'
+start_date = '2020-07-10'
 end_date =   '2020-07-14'
 
-session_length_query = "SELECT session_id,started_at,ended_at,AGE(ended_at,started_at) AS length,entered_event_payload FROM session_stats WHERE started_at::date>='" + start_date + "' AND started_at<='" + end_date  + "';"
-#  ORDER BY AGE(ended_at,started_at) DESC;"
 
-c.execute(session_length_query)
-session_rows = c.fetchall()
-for session in session_rows:
-    print("Session " + str(session[0])  + " Start: " + str(session[1]) + "  Session length: " + str(session[3]))
+#New strategy: use sql INTERVAL to increment
+current_hour = 0
+current_minute = 0
+
+h = 0
+while h < 72:
+    session_query = "SELECT COUNT(session_id) FROM session_stats WHERE started_at > timestamp '" + \
+                    start_date + " 00:00:00' + INTERVAL '" + str(h) + " hours' AND started_at < timestamp '" + \
+                    start_date + " 00:00:00' + INTERVAL '" + str(h+1) + " hours';"
+    c.execute(session_query)
+    count = c.fetchone()[0]
+    print (start_date + " plus " + str(h) + " hours: " + str(count))
+    
+
+
+
+
+#session_length_query = "SELECT session_id,started_at,ended_at,AGE(ended_at,started_at),entered_event_payload FROM session_stats WHERE started_at::date>='" + start_date + "' AND started_at<='" + end_date  + "';"
+#  ORDER BY AGE(ended_at,started_at) DESC;"
+#c.execute(session_length_query)
+#session_rows = c.fetchall()
+#for session in session_rows:
+#    session_id = session[0]
+#    started_at = session[1]
+#    ended_at = session[2]
+#    length = session[3]
+#    payload = session[4]
+#    print("Session " + str(session[0])  + " Start: " + str(session[1]) + "  Session length: " + str(session[3]))
 
 
 #for room in rooms_data["rooms"]:
