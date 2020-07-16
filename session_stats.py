@@ -31,6 +31,7 @@ while h < 72:
     c.execute(session_query)
     count = c.fetchone()[0]
     print (start_date + " plus " + str(h) + " hours: " + str(count))
+    h += 1
     
 
 
