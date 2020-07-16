@@ -30,7 +30,14 @@ while h < 72:
                     start_date + " 00:00:00' + INTERVAL '" + str(h+1) + " hours';"
     c.execute(session_query)
     count = c.fetchone()[0]
-    print (start_date + " plus " + str(h) + " hours: " + str(count))
+    time = h % 24
+    if h <= 24:
+        date = start_date
+    elif h > 24 and h <= 48:
+        date = '2020-07-11'
+    elif h > 48:
+        date = '2020-07-12'
+    print (date + " " + str(time) + ":00 -  " + str(count))
     h += 1
     
 
