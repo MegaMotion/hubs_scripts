@@ -12,7 +12,7 @@ with open(rooms_file, "r") as read_file:
     rooms_data = json.load(read_file)
     read_file.close()
 
-#do_not_copy = [] #  useful for signage or whatever you need in the staging rooms that you do not want in the event rooms.
+do_not_copy = [] #  useful for signage or whatever you need in the staging rooms that you do not want in the event rooms.
 
 db = psycopg2.connect(host="localhost",database="polycosm_production",user="postgres")
 if db is None:
