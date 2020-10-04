@@ -1,17 +1,13 @@
 {
-    "rooms": [
-	{"slug":"m-peachgate","hub_sid":"oefaBKd","copy_name":"PeachGate","copy_rooms":["SB9RfcE","p2N4iWX","f5VSd3D","JnE484n","9jjAiVs","cH55CLP","bmep8BR","KT6GF5g"]},
-	{"slug":"m-xavanadu","hub_sid":"nb4Xh4a","copy_name":"Xavanadu", "copy_rooms":["DT8DngM","J8aNHhx","JZNCqiF","6ucacwQ","TTsSahM","vKPbvkL","GUnmk48","PLSzYGP"]},
-	{"slug":"m-chelamela","hub_sid":"8kkd9rJ","copy_name":"ChelaMela", "copy_rooms":["JmkxLFH","c8ggWzf","xAZ94kA","dN9DgES","x4DeBwM","hg3rbPN","svNbhnu","segRLmb"]},
-	{"slug":"m-jillscrossing","hub_sid":"oZUvVBu","copy_name":"JillsCrossing", "copy_rooms":["akBtKYg","5THfipR","9D7StEs","9Tyw4oy","7fpu8zW","enGr6BX","3Ktg2sV","qYw6FYC"]},
-	{"slug":"m-e13th","hub_sid":"kZSgGXo","copy_name":"E13th","copy_rooms":["Yq4hDRV","rKy7rt5","AT8cW6P","KiQpoxj","xgxr58w","fayrPYC","wjjoWPU","omsprGy"]},
-	{"slug":"m-communityvillage","hub_sid":"zWSpT5H","copy_name":"CommunityVillage","copy_rooms":["nktgenp","XgrrKEA","6ANCyp8","4z7yp7Y","WzmbyHW","awE8Fsr","KvxnbkD","MVpx7Ao"]},
-	{"slug":"m-upperriver","hub_sid":"kTioiNj","copy_name":"UpperRiver","copy_rooms":["EXXEoHM","PWmwsHC","aRruXH6","SWfwkUU","owFN3Jn","jgxhpmJ","Y3JiJm8","5hFQvxH"]},
-	{"slug":"m-theritz","hub_sid":"xFKRmiG","copy_name":"TheRitz","copy_rooms":["7tDAuQU","Vzhre4P","P8Ri9J6","YNxWPds","jTHaYWn","vYPMpfy","JTycKjW","BuzynA8"]},
-	{"slug":"m-mainstage","hub_sid":"VDcxrbc","copy_name":"MainStage","copy_rooms":["zTqh7Ce","D58Lbv2","6HzY4YB","wRVqD7R","69eNPfJ","UiDATRf","fUARnhu","aX3XzQe"]},
-	{"slug":"m-recyclingdock","hub_sid":"jr32npj","copy_name":"RecyclingDock","copy_rooms":["SWSDmpg","Ne5Jn6a","2MSNYYc","BCUVUJe","Kr5Q6iZ","U9oKhr2","5ma9jCU","y2jHCPd"]},
-	{"slug":"m-dragonmeadow","hub_sid":"fHwG6vC","copy_name":"DragonMeadow","copy_rooms":["JqcbErd","MnqwaKR","jPwxDho","pfbHVHT","vD9oufX","rckrcsK","3jDDzHJ","ZrkWYEL"]},
-	{"slug":"m-frontporch","hub_sid":"aYbS3pM","copy_name":"FrontPorch","copy_rooms":["5yATkBn","Z4r7bd2","uXE8UGB","5sWQcmL","mikJGLF","xeNUyxB","f8sgLi3","zyzePgB"]},
-	{"slug":"m-ritzfirepit","hub_sid":"dvVzT7Q","copy_name":"RitzFirepit","copy_rooms":["yLrkTBy"]}	
-	]
+  "rooms": [
+{"slug":"r-crater","hub_sid":"ZBzav4c","copy_name":"Crater","copy_rooms":["xHQuuL9"]},
+{"slug":"r-forest","hub_sid":"N9hyW54","copy_name":"Forest", "copy_rooms":["Ei3dZec"]},
+{"slug":"r-space","hub_sid":"gdR53QB","copy_name":"Space", "copy_rooms":["qoMxcFY"]},
+{"slug":"r-farm","hub_sid":"n8A3vnm","copy_name":"Farm", "copy_rooms":["NZAKcZg"]},
+{"slug":"r-hills","hub_sid":"e5bJv65","copy_name":"Hills","copy_rooms":["NrU549t"]},
+{"slug":"r-campsite","hub_sid":"2JiQWT2","copy_name":"Campsite","copy_rooms":["sHCA5ag"]},
+{"slug":"r-snowymountain","hub_sid":"GuAdgh4","copy_name":"SnowyMountain","copy_rooms":["bkNvgei"]},
+{"slug":"r-lunarsurface","hub_sid":"J64wTis","copy_name":"LunarSurface","copy_rooms":["D2mqHDD"]},
+{"slug":"r-desertisland","hub_sid":"7in3NUE","copy_name":"DesertIsland","copy_rooms":["UmrhJie"]}
+]
 }
