@@ -1,15 +1,7 @@
 {
   "rooms": [
-{"slug":"r-crater","hub_sid":"ZBzav4c","copy_name":"Crater","copy_rooms":["xHQuuL9"]},
-{"slug":"r-forest","hub_sid":"N9hyW54","copy_name":"Forest", "copy_rooms":["Ei3dZec"]},
-{"slug":"r-space","hub_sid":"gdR53QB","copy_name":"Space", "copy_rooms":["qoMxcFY"]},
-{"slug":"r-farm","hub_sid":"n8A3vnm","copy_name":"Farm", "copy_rooms":["NZAKcZg"]},
-{"slug":"r-hills","hub_sid":"e5bJv65","copy_name":"Hills","copy_rooms":["NrU549t"]},
-{"slug":"r-campsite","hub_sid":"2JiQWT2","copy_name":"Campsite","copy_rooms":["sHCA5ag"]},
-{"slug":"r-snowymountain","hub_sid":"GuAdgh4","copy_name":"SnowyMountain","copy_rooms":["bkNvgei"]},
-{"slug":"r-lunarsurface","hub_sid":"J64wTis","copy_name":"LunarSurface","copy_rooms":["D2mqHDD"]},
-{"slug":"r-desertisland","hub_sid":"7in3NUE","copy_name":"DesertIsland","copy_rooms":["UmrhJie"]},
-{"slug":"r-pe-space","hub_sid":"EHnkPkk","copy_name":"PeoplesEvolutionSpace","copy_rooms":["MfKUSyr"]},
-{"slug":"r-pe-farm","hub_sid":"fyY3uBB","copy_name":"PeoplesEvolutionFarm","copy_rooms":["mBiqE4o"]}
-]
+  {"slug":"cldc-main-party","hub_sid":"ujiZBt5","copy_name":"cldc-main-party","copy_rooms":["vfScep5"]},
+  {"slug":"cldc-side-party-a","hub_sid":"i7QAUQq","copy_name":"cldc-side-party-a", "copy_rooms":["Pw728Sa"]}
+  {"slug":"cldc-side-party-b","hub_sid":"bwrXTNy","copy_name":"cldc-side-party-b", "copy_rooms":["efLAW56"]}
+  ]
 }
