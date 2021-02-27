@@ -1,7 +1,7 @@
 {
   "rooms": [
   {"slug":"cldc-main-party","hub_sid":"ujiZBt5","copy_name":"cldc-main-party","copy_rooms":["vfScep5"]},
-  {"slug":"cldc-side-party-a","hub_sid":"i7QAUQq","copy_name":"cldc-side-party-a", "copy_rooms":["Pw728Sa"]}
+  {"slug":"cldc-side-party-a","hub_sid":"i7QAUQq","copy_name":"cldc-side-party-a", "copy_rooms":["Pw728Sa"]},
   {"slug":"cldc-side-party-b","hub_sid":"bwrXTNy","copy_name":"cldc-side-party-b", "copy_rooms":["efLAW56"]}
   ]
 }
