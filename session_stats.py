@@ -32,13 +32,13 @@ while h < 19: # for a one hour event starting at five pm, ie check 17:00 to 19:0
                     start_date + " 00:00:00' + INTERVAL '" + str(h+1) + " hours';"
     h += 1
     print(session_query)
-    c.execute(session_query)
-    result = c.fetchone()
-    if (result is not None):
-        count = c.fetchone()[0]
-        time = h % 24
-        date = start_date
-        print (date + " " + str(time) + ":00 -  " + str(count))
+    #c.execute(session_query)
+    #result = c.fetchone()
+    #if (result is not None):
+        #count = c.fetchone()[0]
+        #time = h % 24
+        #date = start_date
+        #print (date + " " + str(time) + ":00 -  " + str(count))
     
 
 
