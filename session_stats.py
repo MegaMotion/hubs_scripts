@@ -15,16 +15,17 @@ if db is None:
     
 c = db.cursor()
 
-start_date = '2020-07-10'
-end_date =   '2020-07-14'
+start_date = '2020-03-05'
+end_date =   '2020-03-06'
 
 
 #New strategy: use sql INTERVAL to increment
 current_hour = 0
 current_minute = 0
 
-h = 0
-while h < 72:
+h = 17
+#while n < 72: #for a three day event
+while h < 19: # for a one hour event starting at five pm, ie check 17:00 to 19:00 to count stragglers.
     session_query = "SELECT COUNT(session_id) FROM session_stats WHERE started_at > timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h) + " hours' AND started_at < timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h+1) + " hours';"
@@ -33,15 +34,13 @@ while h < 72:
     time = h % 24
     if h < 24:
         date = start_date
-    elif h >= 24 and h < 48:
-        date = '2020-07-11'
-    elif h >= 48:
-        date = '2020-07-12'
+    #elif h >= 24 and h < 48:
+    #    date = '2020-07-11'
+    #elif h >= 48:
+    #    date = '2020-07-12'
     print (date + " " + str(time) + ":00 -  " + str(count))
     h += 1
     
-
-
 
 
 #session_length_query = "SELECT session_id,started_at,ended_at,AGE(ended_at,started_at),entered_event_payload FROM session_stats WHERE started_at::date>='" + start_date + "' AND started_at<='" + end_date  + "';"
