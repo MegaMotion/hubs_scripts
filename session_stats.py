@@ -26,19 +26,18 @@ current_minute = 0
 
 h = 17
 #while n < 72: #for a three day event
-while h < 19: # for a one hour event starting at five pm, ie check 17:00 to 19:00 to count stragglers.
-    session_query = "SELECT COUNT(session_id) FROM session_stats WHERE started_at > timestamp '" + \
+while h < 18: # for a one hour event starting at five pm, ie check 17:00 to 19:00 to count stragglers.
+    session_query = "SELECT session_id,entered_event_payload FROM session_stats WHERE started_at > timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h) + " hours' AND started_at < timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h+1) + " hours';"
     h += 1
     print("QUERY: " + session_query)
     c.execute(session_query)
-    result = c.fetchone()
-    if (result is not None):
-        count = result[0]
-        time = h % 24
-        date = start_date
-        print (date + " " + str(time) + ":00 -  " + str(count))
+    rows = c.fetchall()
+    for row in rows:
+        id = result[0]
+        payload = result[1]
+        print "ID: " + str(id) + "   " + payload
     
 
 
