@@ -4,6 +4,7 @@ import psycopg2
 import json
 
 rooms_file = "rooms.json"
+
 with open(rooms_file, "r") as read_file:
     rooms_data = json.load(read_file)
     read_file.close()
@@ -15,8 +16,8 @@ if db is None:
     
 c = db.cursor()
 
-start_date = '2020-03-05'
-end_date =   '2020-03-06'
+start_date = '2021-03-05'
+end_date =   '2021-03-06'
 
 
 #New strategy: use sql INTERVAL to increment
@@ -29,17 +30,15 @@ while h < 19: # for a one hour event starting at five pm, ie check 17:00 to 19:0
     session_query = "SELECT COUNT(session_id) FROM session_stats WHERE started_at > timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h) + " hours' AND started_at < timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h+1) + " hours';"
-    c.execute(session_query)
-    count = c.fetchone()[0]
-    time = h % 24
-    if h < 24:
-        date = start_date
-    #elif h >= 24 and h < 48:
-    #    date = '2020-07-11'
-    #elif h >= 48:
-    #    date = '2020-07-12'
-    print (date + " " + str(time) + ":00 -  " + str(count))
     h += 1
+    print(session_query)
+    c.execute(session_query)
+    result = c.fetchone()
+    if (result is not None):
+        count = c.fetchone()[0]
+        time = h % 24
+        date = start_date
+        print (date + " " + str(time) + ":00 -  " + str(count))
     
 
 
