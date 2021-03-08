@@ -37,7 +37,8 @@ while h < 18: # for a one hour event starting at five pm, ie check 17:00 to 19:0
     for row in rows:
         id = row[0]
         payload = row[1]
-        print "ID: " + str(id) + ",  userAgent:   " + payload{"userAgent"}
+        json_payload = json.loads(str(payload))
+        print "ID: " + str(id) + ",  userAgent:   " + json_payload["userAgent"]
 
 #session_length_query = "SELECT session_id,started_at,ended_at,AGE(ended_at,started_at),entered_event_payload FROM session_stats WHERE started_at::date>='" + start_date + "' AND started_at<='" + end_date  + "';"
 #  ORDER BY AGE(ended_at,started_at) DESC;"
