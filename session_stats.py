@@ -40,9 +40,10 @@ while h < 18: # for a one hour event starting at five pm, ie check 17:00 to 19:0
         #attempt_one = payload["userAgent"]
         #attempt_two = payload[0]
         encodedUnicode = json.dumps(payload)
-        #userAgent = encodedUnicode['userAgent']
+        ##userAgent = encodedUnicode['userAgent']
         attempt_three = encodedUnicode['userAgent']       
-        #json_payload = json.loads(str(payload))
+        json_payload = json.loads(endocdedUnicode)
+        userAgent = json_payload['userAgent']
         print "ID: " + str(id) + ",  userAgent:   " + attempt_one
 
 #session_length_query = "SELECT session_id,started_at,ended_at,AGE(ended_at,started_at),entered_event_payload FROM session_stats WHERE started_at::date>='" + start_date + "' AND started_at<='" + end_date  + "';"
