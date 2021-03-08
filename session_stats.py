@@ -38,10 +38,8 @@ while h < 18: # for a one hour event starting at five pm, ie check 17:00 to 19:0
         id = row[0]
         payload = row[1]
         if payload is not None:
-            for key, value in payload.iteritems() :
-                print key, value
-            occupantCount = payload["initialOccupantCount"]
-            print "ID: " + str(id) + ",  occupantCount:   " + str(occupantCount)
+            userAgent = payload["userAgent"]
+            print "ID: " + str(id) + ",  userAgent:   " + userAgent
 
 #session_length_query = "SELECT session_id,started_at,ended_at,AGE(ended_at,started_at),entered_event_payload FROM session_stats WHERE started_at::date>='" + start_date + "' AND started_at<='" + end_date  + "';"
 #  ORDER BY AGE(ended_at,started_at) DESC;"
