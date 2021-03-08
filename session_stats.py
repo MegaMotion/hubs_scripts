@@ -37,9 +37,10 @@ while h < 18: # for a one hour event starting at five pm, ie check 17:00 to 19:0
     for row in rows:
         id = row[0]
         payload = row[1]
-        #attempt_one = payload['userData']
+        attempt_one = payload['userAgent']
         #attempt_two = payload[0]
         encodedUnicode = json.dumps(payload)
+        userAgent = encodedUnicode['userAgent']
         #attempt_three = payload[u'userData']        
         #json_payload = json.loads(str(payload))
         print "ID: " + str(id) + ",  userAgent:   " + str(encodedUnicode)
