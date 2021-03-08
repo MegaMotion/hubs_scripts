@@ -36,7 +36,7 @@ while h < 18: # for a one hour event starting at five pm, ie check 17:00 to 19:0
     rows = c.fetchall()
     for row in rows:
         id = row[0]
-        payload = json.loads(row[1])
+        payload = row[1]
         payload_dump = json.dumps(payload)
         #userAgent = encodedUnicode['userAgent']
         #attempt_three = encodedUnicode['userAgent']       
