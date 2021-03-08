@@ -40,8 +40,8 @@ while h < 18: # for a one hour event starting at five pm, ie check 17:00 to 19:0
         #attempt_one = payload["userAgent"]
         #attempt_two = payload[0]
         encodedUnicode = json.dumps(payload)
-        ##userAgent = encodedUnicode['userAgent']
-        attempt_three = encodedUnicode['userAgent']       
+        #userAgent = encodedUnicode['userAgent']
+        #attempt_three = encodedUnicode['userAgent']       
         json_payload = json.loads(endocdedUnicode)
         userAgent = json_payload['userAgent']
         print "ID: " + str(id) + ",  userAgent:   " + attempt_one
