@@ -1,7 +1,7 @@
 {
     "rooms": [
-	{"slug":"derby-lobby","hub_sid":"L5T8XtB","copy_name":"derby-lobby", "copy_rooms":["t9MXXBS","xC9R9oa","GbpXUNb","VKqutpZ","Yd8a33y"]}
-	{"slug":"derby-atrium","hub_sid":"ArJBxNF","copy_name":"derby-atrium", "copy_rooms":["sbTmHFy","jeR3JNP","oRRGdGd","NX9gb5W","cuApUu5"]}
+	{"slug":"derby-lobby","hub_sid":"L5T8XtB","copy_name":"derby-lobby", "copy_rooms":["t9MXXBS","xC9R9oa","GbpXUNb","VKqutpZ","Yd8a33y"]},
+	{"slug":"derby-atrium","hub_sid":"ArJBxNF","copy_name":"derby-atrium", "copy_rooms":["sbTmHFy","jeR3JNP","oRRGdGd","NX9gb5W","cuApUu5"]},
 	{"slug":"derby-track","hub_sid":"iDKdgiQ","copy_name":"derby-track", "copy_rooms":["L3BHAnq","GEvcDRM","okwfwmR","CTHkDZ9","4N5eDaU","LztMCCY","qxyncQY","ccaVSgA","HDbuGjq","HrjNEgt","3keDUib","qGpunEQ","9fxDnCK","4Q6uTpW","FSVkA97"]}
   ]
 }
