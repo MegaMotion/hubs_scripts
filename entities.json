@@ -1,0 +1,36 @@
+{
+  "entities": [ 
+    { 
+      "name": "hubbub",
+      "rooms": [ 
+        { 
+          "name": "freespace",     
+          "staging": "AcwYwAk",
+          "event": ["nkU69b5","cpbMiQ8"]
+        }
+      ],
+      "members": ["933367124888387589"]
+    },
+    {
+      "name": "rollerderby",
+      "rooms": [
+        {
+          "name": "lobby",
+          "staging": "L5T8XtB",
+          "event": ["t9MXXBS","xC9R9oa","GbpXUNb","VKqutpZ","Yd8a33y"]
+        },
+        {
+          "name": "atrium",
+          "staging": "ArJBxNF",
+          "event": ["sbTmHFy","jeR3JNP","oRRGdGd","NX9gb5W","cuApUu5"]
+        },
+        {
+          "name": "track",
+          "staging": "iDKdgiQ",
+          "event": ["L3BHAnq","GEvcDRM","okwfwmR","CTHkDZ9","4N5eDaU","LztMCCY","qxyncQY","ccaVSgA","HDbuGjq","HrjNEgt","3keDUib","qGpunEQ","9fxDnCK","4Q6uTpW","FSVkA97"]
+        }
+      ],
+      "members": ["933367124888387589"]
+    }
+  ]
+}
