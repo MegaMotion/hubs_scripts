@@ -25,13 +25,13 @@ for entity in entities_data["entities"]:
     rooms.append(c.fetchone()[0])
     
     for event_room in room["event"]:
-      print("Event room: " + event_room)
+      #print("Event room: " + event_room)
       sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + event_room + "';"
       c.execute(sql)
       rooms.append(c.fetchone()[0])
 
 for room in rooms:
-  print("Room: " + room)
+  print("Room: " + str(room))
 
 db.commit()    
 c.close()
