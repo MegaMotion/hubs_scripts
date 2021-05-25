@@ -17,30 +17,35 @@ if db is None:
     
 c = db.cursor()
 
-# Task: to add a row in hub_role_memberships for each entity member, for each room, both staging and event.
+# First, clear the table
+sql = "DELETE FROM hub_role_memberships;"
+c.execute(sql)
 
+count = 0
+room_count = 0
 dt = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 for entity in entities_data["entities"]:
   rooms = []
   for room in entity["rooms"]:
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["staging"] + "';"
     c.execute(sql)
-    rooms.append(c.fetchone()[0])    
+    rooms.append(c.fetchone()[0])
+    room_count += 1
     for event_room in room["event"]:
       #print("Event room: " + event_room)
       sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + event_room + "';"
       c.execute(sql)
       rooms.append(c.fetchone()[0])
+      room_count += 1
 
   for room in rooms:
     #print("Room: " + str(room))
     for member in entity["members"]:
       sql = "INSERT INTO hub_role_memberships (hub_id,account_id,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + ",'" + str(dt) + "','" + str(dt) + "');"
-      print(sql)
       c.execute(sql)
-  #for member in entity["members"]:
-    #print("Member: " + member)
+      count += 1
     
+print("Added " + str(count) + " room permissions for " + str(room_count) + " rooms.")
 
 db.commit()    
 c.close()
