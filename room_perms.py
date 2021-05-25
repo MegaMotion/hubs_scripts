@@ -34,7 +34,7 @@ for entity in entities_data["entities"]:
   for room in rooms:
     #print("Room: " + str(room))
     for member in entity["members"]:
-      sql = "INSERT INTO hub_membership_roles (hub_id,account_id,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + "," + str(dt) + "," + str(dt) + ");"
+      sql = "INSERT INTO hub_membership_roles (hub_id,account_id,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + ",'" + str(dt) + "','" + str(dt) + "');"
       print(sql)
       c.execute(sql)
   #for member in entity["members"]:
