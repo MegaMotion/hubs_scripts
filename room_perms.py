@@ -36,7 +36,7 @@ for entity in entities_data["entities"]:
     for member in entity["members"]:
       sql = "INSERT INTO hub_membership_roles (hub_id,account_id,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + "," + str(dt) + "," + str(dt) + ");"
       print(sql)
-      #c.execute(sql)
+      c.execute(sql)
   #for member in entity["members"]:
     #print("Member: " + member)
     
