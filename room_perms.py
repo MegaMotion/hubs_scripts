@@ -19,8 +19,7 @@ c = db.cursor()
 
 # Task: to add a row in hub_role_memberships for each entity member, for each room, both staging and event.
 rooms = []
-timestamp = datetime.datetime.now()
-print("Now: " + str(timestamp))
+dt = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 for entity in entities_data["entities"]:
   for room in entity["rooms"]:
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["staging"] + "';"
@@ -33,12 +32,13 @@ for entity in entities_data["entities"]:
       rooms.append(c.fetchone()[0])
 
   for room in rooms:
-    print("Room: " + str(room))
-    #for member in entity["members"]:
-    #  sql = "INSERT INTO hub_membership_roles () VALUES ();"
-    #  c.execute(sql)
-  for member in entity["members"]:
-    print("Member: " + member)
+    #print("Room: " + str(room))
+    for member in entity["members"]:
+      sql = "INSERT INTO hub_membership_roles (hub_id,account_id,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + "," + str(dt) + "," + str(dt) + ");"
+      print(sql)
+      #c.execute(sql)
+  #for member in entity["members"]:
+    #print("Member: " + member)
     
 
 db.commit()    
