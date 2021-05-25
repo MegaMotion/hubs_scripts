@@ -4,7 +4,8 @@ import sys
 import requests
 
 #r = requests.get('https://cgi.chriscalef.com/add_user/PyUser')
-r = requests.get('https://7eg0pdrtea.execute-api.us-west-2.amazonaws.com/default/HubsEventsLambdaPg')
+#r = requests.get('https://7eg0pdrtea.execute-api.us-west-2.amazonaws.com/default/HubsEventsLambdaPg')
+r = requests.get('https://hubbub6-data.s3-us-west-2.amazonaws.com/entities.json')
 
 if (r != None):
   print ("status: " + str(r.status_code) + "\n",)

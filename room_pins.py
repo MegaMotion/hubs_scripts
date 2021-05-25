@@ -2,21 +2,24 @@
 import sys
 import psycopg2
 import json
+import requests
 
 entities_file = "entities.json" # new way
-rooms_file = "rooms.json"       # old way
+#rooms_file = "rooms.json"       # old way
+r = requests.get('https://hubbub6-data.s3-us-west-2.amazonaws.com/entities.json') # newest way
+entities_data = json.load(r.text)
 
-if (len(sys.argv)==2):
-    rooms_file = sys.argv[1]
-print("Copying pins for rooms file: " + rooms_file)
+#if (len(sys.argv)==2):
+#    rooms_file = sys.argv[1]
+#print("Copying pins for rooms file: " + rooms_file)
 
-with open(rooms_file, "r") as read_file:
-    rooms_data = json.load(read_file)
-    read_file.close()
+#with open(rooms_file, "r") as read_file:
+#    rooms_data = json.load(read_file)
+#    read_file.close()
 
-with open(entities_file, "r") as read_file:
-    entities_data = json.load(read_file)
-    read_file.close()
+#with open(entities_file, "r") as read_file:
+#    entities_data = json.load(read_file)
+#    read_file.close()
 
 do_not_copy = [] #  useful for signage or whatever you need in the staging rooms that you do not want in the event rooms.
 do_not_delete = [] # pinned items in event rooms that should not be overwritten from the staging rooms (for future)
