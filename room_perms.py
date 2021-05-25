@@ -20,7 +20,7 @@ c = db.cursor()
 # Task: to add a row in hub_role_memberships for each entity member, for each room, both staging and event.
 rooms = []
 timestamp = datetime.datetime.now()
-print("Now: " + timestamp)
+print("Now: " + str(timestamp))
 for entity in entities_data["entities"]:
   for room in entity["rooms"]:
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["staging"] + "';"
