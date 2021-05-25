@@ -3,6 +3,7 @@ import sys
 import psycopg2
 import json
 import requests
+import datetime
 
 entities_file = "entities.json" # new way
 r = requests.get('https://hubbub6-data.s3-us-west-2.amazonaws.com/entities.json') # newest way
@@ -18,20 +19,27 @@ c = db.cursor()
 
 # Task: to add a row in hub_role_memberships for each entity member, for each room, both staging and event.
 rooms = []
+timestamp = datetime.datetime.now()
+print("Now: " + timestamp)
 for entity in entities_data["entities"]:
   for room in entity["rooms"]:
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["staging"] + "';"
     c.execute(sql)
-    rooms.append(c.fetchone()[0])
-    
+    rooms.append(c.fetchone()[0])    
     for event_room in room["event"]:
       #print("Event room: " + event_room)
       sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + event_room + "';"
       c.execute(sql)
       rooms.append(c.fetchone()[0])
 
-for room in rooms:
-  print("Room: " + str(room))
+  for room in rooms:
+    print("Room: " + str(room))
+    #for member in entity["members"]:
+    #  sql = "INSERT INTO hub_membership_roles () VALUES ();"
+    #  c.execute(sql)
+  for member in entity["members"]:
+    print("Member: " + member)
+    
 
 db.commit()    
 c.close()
