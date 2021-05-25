@@ -18,9 +18,10 @@ if db is None:
 c = db.cursor()
 
 # Task: to add a row in hub_role_memberships for each entity member, for each room, both staging and event.
-rooms = []
+
 dt = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 for entity in entities_data["entities"]:
+  rooms = []
   for room in entity["rooms"]:
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + room["staging"] + "';"
     c.execute(sql)
