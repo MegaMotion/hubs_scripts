@@ -45,7 +45,7 @@ for entity in entities_data["entities"]:
     for member in entity["members"]:
       sql = "INSERT INTO hub_role_memberships (hub_id,account_id,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + ",'" + str(dt) + "','" + str(dt) + "');"
       c.execute(sql)
-      sql = "INSERT INTO account_favorites (hub_id,account_id,last_activiated_at,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + ",'" + str(dt) + "','" + str(dt) + "','" + str(dt) + "');"
+      sql = "INSERT INTO account_favorites (hub_id,account_id,last_activated_at,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + ",'" + str(dt) + "','" + str(dt) + "','" + str(dt) + "');"
       c.execute(sql)
 
       count += 1
