@@ -4,8 +4,7 @@ import psycopg2
 import json
 import requests
 
-entities_file = "entities.json" # new way
-#rooms_file = "rooms.json"       # old way
+entities_file = "entities.json"
 r = requests.get('https://hubbub6-data.s3-us-west-2.amazonaws.com/entities.json') # newest way
 entities_data = json.loads(r.text)
 

@@ -20,6 +20,8 @@ c = db.cursor()
 # First, clear the table
 sql = "DELETE FROM hub_role_memberships;"
 c.execute(sql)
+sql = "DELETE FROM account_favorites;"
+c.execute(sql)
 
 count = 0
 room_count = 0
@@ -43,6 +45,9 @@ for entity in entities_data["entities"]:
     for member in entity["members"]:
       sql = "INSERT INTO hub_role_memberships (hub_id,account_id,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + ",'" + str(dt) + "','" + str(dt) + "');"
       c.execute(sql)
+      sql = "INSERT INTO account_favorites (hub_id,account_id,last_activiated_at,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + ",'" + str(dt) + "','" + str(dt) + "','" + str(dt) + "');"
+      c.execute(sql)
+
       count += 1
     
 print("Added " + str(count) + " room permissions for " + str(room_count) + " rooms.")
