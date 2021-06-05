@@ -32,7 +32,7 @@ current_minute = 0
 h = 0
 #while n < 72: #for a three day event
 while h < 24: # for a one hour event starting at five pm, ie check 17:00 to 19:00 to count stragglers.
-    session_query = "SELECT DISTINCT entered_event_payload FROM session_stats WHERE started_at > timestamp '" + \
+    session_query = "SELECT session_id,entered_event_payload FROM session_stats WHERE started_at > timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h) + " hours' AND started_at < timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h+1) + " hours';"
     h += 1
