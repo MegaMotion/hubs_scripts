@@ -2,12 +2,17 @@
 import sys
 import psycopg2
 import json
+#import requests
 
-rooms_file = "rooms.json"
+#rooms_file = "rooms.json"
+#with open(rooms_file, "r") as read_file:
+#    rooms_data = json.load(read_file)
+#    read_file.close()
 
-with open(rooms_file, "r") as read_file:
-    rooms_data = json.load(read_file)
-    read_file.close()
+#entities_file = "entities.json"
+#r = requests.get('https://hubbub6-data.s3-us-west-2.amazonaws.com/entities.json') # newest way
+#entities_data = json.loads(r.text)
+
 
 db = psycopg2.connect(host="localhost",database="polycosm_production",user="postgres")
 if db is None:
@@ -16,17 +21,17 @@ if db is None:
     
 c = db.cursor()
 
-start_date = '2021-03-05'
-end_date =   '2021-03-06'
+start_date = '2021-06-05'
+end_date =   '2021-06-06'
 
 
 #New strategy: use sql INTERVAL to increment
 current_hour = 0
 current_minute = 0
 
-h = 17
+h = 0
 #while n < 72: #for a three day event
-while h < 19: # for a one hour event starting at five pm, ie check 17:00 to 19:00 to count stragglers.
+while h < 24: # for a one hour event starting at five pm, ie check 17:00 to 19:00 to count stragglers.
     session_query = "SELECT session_id,entered_event_payload FROM session_stats WHERE started_at > timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h) + " hours' AND started_at < timestamp '" + \
                     start_date + " 00:00:00' + INTERVAL '" + str(h+1) + " hours';"
