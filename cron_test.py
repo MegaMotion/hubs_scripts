@@ -22,3 +22,4 @@ print(json.dumps(temp_params))
 print("SENDING!!!")
 r = requests.post(lambdaUrl, json = temp_params)
 print(r.text)
+
