@@ -45,5 +45,5 @@ for room in data["body"]["Items"]:
 
 for room in rooms: #Then add hub role memberships to all of them, for member.
   sql = "INSERT INTO hub_role_memberships (hub_id,account_id,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + ",'" + dt + "','" + dt + "');"
-  #c.execute(sql)
+  c.execute(sql)
   print(sql)
