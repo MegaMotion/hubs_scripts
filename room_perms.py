@@ -36,7 +36,7 @@ for room in data["body"]["Items"]:
   if (len(sid)==7):
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + sid + "';"
     c.execute(sql)
-    if (len(c.fetchone()) > 0):
+    if (c.rowcount > 0):
       print(c.fetchone()[0])
       rooms.append(c.fetchone()[0])
       room_count += 1
