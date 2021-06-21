@@ -36,7 +36,8 @@ for room in data["body"]["Items"]:
   if (len(sid)==7):
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + sid + "';"
     c.execute(sql)
-    rooms.append(c.fetchone()[0])
+    print(sql)
+    #rooms.append(c.fetchone()[0])
     room_count += 1
 
 for room in rooms: #Then add hub role memberships to all of them, for member.
