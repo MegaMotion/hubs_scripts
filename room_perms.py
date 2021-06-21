@@ -32,7 +32,7 @@ data = json.loads(r.text)
 rooms = []
 for room in data["body"]["Items"]:
   sid = room["pk"][5:]
-  print(" room: " + sid)
+  print(" room: " + sid + " length: " + str(len(sid)))
   if (len(sid)==7):
     sql = "SELECT hub_id FROM hubs WHERE hub_sid='" + sid + "';"
     c.execute(sql)
