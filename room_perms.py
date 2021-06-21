@@ -38,8 +38,9 @@ for room in data["body"]["Items"]:
     c.execute(sql)
     print("Rowcount: " + str(c.rowcount))
     if (c.rowcount == 1):
-      print("Room ID: " + str(c.fetchone()[0]))
-      #rooms.append(c.fetchone()[0])
+      RoomID = c.fetchone()[0]
+      print("Room ID: " + str(RoomID))
+      rooms.append(RoomID)
       room_count += 1
 
 for room in rooms: #Then add hub role memberships to all of them, for member.
