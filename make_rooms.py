@@ -49,9 +49,9 @@ for key in rooms:
     room_ID = row[0]  
     scene_ID = row[1]
     scene_listing_ID = row[2]
-    if (scene_ID.length > 0):
+    if (scene_ID != None):
       rooms[key]["scene_id"] = scene_ID
-    elif (scene_listing_ID.length > 0):
+    elif (scene_listing_ID != None):
       rooms[key]["scene_id"] = scene_listing_ID
     print("Room ID: " + str(room_ID) + " scene ID " + str(scene_ID) + " listing ID " + str(scene_listing_ID))
 
