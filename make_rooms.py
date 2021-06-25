@@ -77,7 +77,8 @@ for user in body["users"]:
   return_data["users"].append(this_user)
 
   room_index += 1
-
+  
+return_data["room_index"] = room_index
 print(json.dumps(return_data))
   #NOW: look up scene ID from database, and grab room ID bigint while you're here
   #Then use that to create a new room, with this accountID as owner, and the scene ID
