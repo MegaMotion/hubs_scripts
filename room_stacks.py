@@ -6,15 +6,15 @@ import requests
 
 
 lambdaUrl = 'https://icswse9im8.execute-api.us-west-2.amazonaws.com/ocf/base'
-temp_params = { 
-  'command': 'setRoomSize',
-  'size': 25
-}
+#temp_params = { 
+#  'command': 'setRoomSize',
+#  'size': 25
+#}
 
-print(json.dumps(temp_params))
-print("SENDING!!!")
-r = requests.post(lambdaUrl, json = temp_params)
-print(r.text)
+#print(json.dumps(temp_params))
+#print("SENDING!!!")
+#r = requests.post(lambdaUrl, json = temp_params)
+#print(r.text)
 
 rooms_file = "rooms.json"
 with open(rooms_file, "r") as read_file:
@@ -37,7 +37,8 @@ for room in rooms_data["rooms"]:
     'pk': pk,
     'sk': 'STAGING',
     'data': room["copy_name"],
-    'size': 25
+    'size': 25,
+    'sort_index': 0
   }
   params["staging_rooms"].append(stage_params)
   
@@ -52,17 +53,18 @@ for room in rooms_data["rooms"]:
     #print("Event room: " + copy_room)
     new_params = {
       'pk': "Room-" + copy_room,
-      'sk': sid,
+      'sk': "Room-" + sid,
       'data': room["copy_name"] + counter,
-      'size': 25
+      'size': 25,
+      'sort_index': c
     }
     params["event_rooms"].append(new_params)
   
   
 #print(json.dumps(params))
 #print("SENDING!!!")
-#r = requests.post(lambdaUrl, json = params)
-#print(r.text)
+r = requests.post(lambdaUrl, json = params)
+print(r.text)
 
 
 #r = requests.post(lambdaUrl, json = params)
