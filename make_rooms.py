@@ -43,9 +43,10 @@ for key in rooms:
   c.execute(sql)
   if (c.rowcount == 1):
       #rooms[key]["hub_id"] = c.fetchone()[0]
-      room_ID = c.fetchone()[0]  
-      scene_ID = c.fetchone()[1]
-      scene_listing_ID = c.fetchone()[2]
+      row = c.fetchone()
+      room_ID = row[0]  
+      scene_ID = row[1]
+      scene_listing_ID = row[2]
       #if (scene_ID.length > 0):
       #  rooms[key]["scene_id"] = scene_ID
       #elif (scene_listing_ID.length > 0):
