@@ -42,13 +42,15 @@ for key in rooms:
   sql = "SELECT hub_id,scene_id,scene_listing_id FROM hubs WHERE hub_sid='" + key + "';"
   c.execute(sql)
   if (c.rowcount == 1):
-      rooms[key]["hub_id"] = c.fetchone()[0]      
+      #rooms[key]["hub_id"] = c.fetchone()[0]
+      room_ID = c.fetchone()[0]  
       scene_ID = c.fetchone()[1]
       scene_listing_ID = c.fetchone()[2]
-      if (scene_ID.length > 0):
-        rooms[key]["scene_id"] = scene_ID
-      elif (scene_listing_ID.length > 0):
-        rooms[key]["scene_id"] = scene_listing_ID
+      #if (scene_ID.length > 0):
+      #  rooms[key]["scene_id"] = scene_ID
+      #elif (scene_listing_ID.length > 0):
+      #  rooms[key]["scene_id"] = scene_listing_ID
+      print("Room ID: " + room_ID + " scene ID " + scene_ID + " listing ID " + scene_listing_ID)
 
 for user in body["users"]:
   print(sql)
