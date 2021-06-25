@@ -51,7 +51,7 @@ for key in rooms:
       #  rooms[key]["scene_id"] = scene_ID
       #elif (scene_listing_ID.length > 0):
       #  rooms[key]["scene_id"] = scene_listing_ID
-      print("Room ID: " + room_ID + " scene ID " + scene_ID + " listing ID " + scene_listing_ID)
+      print("Room ID: " + str(room_ID) + " scene ID " + str(scene_ID) + " listing ID " + str(scene_listing_ID))
 
 for user in body["users"]:
   print(sql)
