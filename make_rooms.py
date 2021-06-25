@@ -45,6 +45,7 @@ for key in rooms:
     rooms[key] = {}
     rooms[key]["hub_id"] = c.fetchone()[0]
     row = c.fetchone()
+    print(row)
     room_ID = row[0]  
     scene_ID = row[1]
     scene_listing_ID = row[2]
