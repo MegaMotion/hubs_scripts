@@ -70,7 +70,7 @@ for user in body["users"]:
   sql = "INSERT INTO hubs (hub_sid,slug,name,inserted_at,updated_at,entry_mode,scene_id," + \
        "room_size,created_by_account_id,member_permissions,allow_promotion) VALUES " + \
         "('" + new_sid + "','" + new_sid + "','" + new_sid + "','" + dt + "','" + dt + \
-        "','allow'," + rooms[user["last_room"]]["scene_id"] + ",40," + user["sk"] + ",48,'t');"
+        "','allow'," + str(rooms[user["last_room"]]["scene_id"]) + ",40," + str(user["sk"]) + ",48,'t');"
   print(sql)
   #c.execute(sql)
   this_user = { "pk": user["pk"], "sk": user["sk"], "room": new_sid }
