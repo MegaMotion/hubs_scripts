@@ -43,7 +43,7 @@ for key in rooms:
   c.execute(sql)
   if (c.rowcount == 1):
     rooms[key] = {}
-    rooms[key]["hub_id"] = c.fetchone()[0]
+    #rooms[key]["hub_id"] = c.fetchone()[0]
     row = c.fetchone()
     print(row)
     room_ID = row[0]  
