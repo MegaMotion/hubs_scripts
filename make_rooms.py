@@ -49,10 +49,11 @@ for key in rooms:
     room_ID = row[0]  
     scene_ID = row[1]
     scene_listing_ID = row[2]
-    if (scene_ID != None):
-      rooms[key]["scene_id"] = scene_ID
-    elif (scene_listing_ID != None):
-      rooms[key]["scene_id"] = scene_listing_ID
+    rooms[key]["hub_id"] = room_ID # Looks like we don't actually need this.
+    #if (scene_ID != None):
+    rooms[key]["scene_id"] = scene_ID
+    #elif (scene_listing_ID != None):
+    rooms[key]["scene_listing_id"] = scene_listing_ID
     print("Room ID: " + str(room_ID) + " scene ID " + str(scene_ID) + " listing ID " + str(scene_listing_ID))
 
 for user in body["users"]:
@@ -67,10 +68,17 @@ for user in body["users"]:
   else:
     new_sid += str(room_index)
 
-  sql = "INSERT INTO hubs (hub_sid,slug,name,inserted_at,updated_at,entry_mode,scene_id," + \
+  sql = ""
+  if (rooms[user["last_room"]]["scene_id"] != None):
+    sql = "INSERT INTO hubs (hub_sid,slug,name,inserted_at,updated_at,entry_mode,scene_id," + \
        "room_size,created_by_account_id,member_permissions,allow_promotion) VALUES " + \
         "('" + new_sid + "','" + new_sid + "','" + new_sid + "','" + dt + "','" + dt + \
         "','allow'," + str(rooms[user["last_room"]]["scene_id"]) + ",40," + str(user["sk"]) + ",48,'t');"
+  elif (rooms[user["last_room"]]["scene_listing_id"] != None):
+    sql = "INSERT INTO hubs (hub_sid,slug,name,inserted_at,updated_at,entry_mode,scene_listing_id," + \
+       "room_size,created_by_account_id,member_permissions,allow_promotion) VALUES " + \
+        "('" + new_sid + "','" + new_sid + "','" + new_sid + "','" + dt + "','" + dt + \
+        "','allow'," + str(rooms[user["last_room"]]["scene_listing_id"]) + ",40," + str(user["sk"]) + ",48,'t');"
   print(sql)
   c.execute(sql)
   this_user = { "pk": user["pk"], "sk": user["sk"], "room": new_sid }
