@@ -72,10 +72,9 @@ for user in body["users"]:
         "('" + new_sid + "','" + new_sid + "','" + new_sid + "','" + dt + "','" + dt + \
         "','allow'," + str(rooms[user["last_room"]]["scene_id"]) + ",40," + str(user["sk"]) + ",48,'t');"
   print(sql)
-  #c.execute(sql)
+  c.execute(sql)
   this_user = { "pk": user["pk"], "sk": user["sk"], "room": new_sid }
   return_data["users"].append(this_user)
-
   room_index += 1
 
 return_data["room_index"] = room_index
