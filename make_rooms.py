@@ -82,6 +82,12 @@ return_data["command"] = "returnRoomRequests"
 r = requests.post(lambdaUrl, json = return_data)
 print(r.text)
 
+db.commit()    
+c.close()
+db.close()
+
+
+
   #NOW: look up scene ID from database, and grab room ID bigint while you're here
   #Then use that to create a new room, with this accountID as owner, and the scene ID
   #Then store that new sid (ocf0004 etc) with this user, and send it back with a returnRoomRequests command.
@@ -107,7 +113,3 @@ print(r.text)
 #  sql = "INSERT INTO hub_role_memberships (hub_id,account_id,inserted_at,updated_at) VALUES (" + str(room) + "," + str(member) + ",'" + dt + "','" + dt + "');"
 #  c.execute(sql)
 #  print(sql)
-
-#db.commit()    
-#c.close()
-#db.close()
