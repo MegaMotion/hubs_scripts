@@ -26,7 +26,7 @@ r = requests.post(lambdaUrl, json = params)
 data = json.loads(r.text)
 print(r.text)
 body = json.loads(data["body"])
-
+print(json.dumps(body))
 room_index = body["member_room_index"]
 
 print("Users: \n" )
