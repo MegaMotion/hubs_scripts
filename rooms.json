@@ -1,6 +1,5 @@
 {
     "rooms": [
-	{"slug":"m-peachgate","hub_sid":"oefaBKd","copy_name":"PeachGate","copy_rooms":["SB9RfcE","p2N4iWX","f5VSd3D","JnE484n","9jjAiVs","cH55CLP","bmep8BR","KT6GF5g"]},
 	{"slug":"m-xavanadu","hub_sid":"nb4Xh4a","copy_name":"Xavanadu", "copy_rooms":["DT8DngM","J8aNHhx","JZNCqiF","6ucacwQ","TTsSahM","vKPbvkL","GUnmk48","PLSzYGP"]},
 	{"slug":"m-chelamela","hub_sid":"8kkd9rJ","copy_name":"ChelaMela", "copy_rooms":["JmkxLFH","c8ggWzf","xAZ94kA","dN9DgES","x4DeBwM","hg3rbPN","svNbhnu","segRLmb"]},
 	{"slug":"m-jillscrossing","hub_sid":"oZUvVBu","copy_name":"JillsCrossing", "copy_rooms":["akBtKYg","5THfipR","9D7StEs","9Tyw4oy","7fpu8zW","enGr6BX","3Ktg2sV","qYw6FYC"]},
